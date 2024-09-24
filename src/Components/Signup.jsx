@@ -7,7 +7,6 @@ function Signup() {
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
     try {
       const response = await fetch(`http://localhost:8080/members/signup/${email}/${password}`);
       if (response.ok) {
